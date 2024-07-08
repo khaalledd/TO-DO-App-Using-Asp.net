@@ -1,0 +1,28 @@
+﻿@model CreateUser
+<h1>Register</h1>
+
+<div class="w-75 mx-auto">
+    <form asp-action="SubmitRegister" asp-controller="Account">
+        <div>
+            <label asp-for="Name">Name</label>
+            <input asp-validation-for="Name" class="form-control" asp-for="Name" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-validation-for="Email" class="form-control" asp-for="Email" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Password">Password</label>
+            <input asp-validation-for="Password" type="password" class="form-control" asp-for="Password" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Role">Role</label>
+            <select asp-for="Role" class="form-control">
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+            </select>
+        </div>
+        <input type="submit" value="Register" class="btn btn-primary mt-3" />
+    </form>
+</div>
+<partial name="_ValidationScriptsPartial"></partial>

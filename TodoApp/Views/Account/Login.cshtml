@@ -1,0 +1,20 @@
+﻿@model LoginCred
+<h1>Log in</h1>
+<div class="w-75 mx-auto">
+    <form asp-action="SubmitLogin" asp-controller="Account" method="post">
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control" type="password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+
+        <input type="submit" class="btn btn-primary mt-3" />
+    </form>
+</div>
+
+<partial name="_ValidationScriptsPartial" />
